@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Create new homepage baner",
+      "details": "lorem20",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "title": "Make Vue E-Commerce Projects",
+      "details": "Car shop",
+      "complete": true
+    }
+  ]
+}
