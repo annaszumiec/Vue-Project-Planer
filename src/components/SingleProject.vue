@@ -3,9 +3,12 @@
     <div @click="showDetails = !showDetails" class="actions">
       <h3>{{ project.title }}</h3>
       <div class="icons">
-        <span class="material-icons"> edit </span>
+        <router-link :to="{ name: 'EditProject', params: { id: project.id } }">
+          <span class="material-icons">edit</span>
+        </router-link>
+
         <span class="material-icons" @click="deleteProject"> delete </span>
-        <span @click="toggleComplete" class="material-icons tick">
+        <span @click="toggleComplete" class="material-icons check">
           check_circle
         </span>
       </div>
@@ -75,7 +78,8 @@ h3 {
 .project.complete {
   border-left: 4px solid #00ce89;
 }
-.project.complete.tick {
+/* Important! Kepp space after complete to make class check work */
+.project.complete .check {
   color: #00ce89;
 }
 </style>
